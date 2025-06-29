@@ -1,1 +1,42 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Word IA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Word IA</h1>
+    <nav>
+      <button onclick="switchTab('style')">Style d’écriture</button>
+      <button onclick="switchTab('structure')">Structure</button>
+      <button onclick="switchTab('emotion')">Émotions</button>
+      <button onclick="switchTab('calibre')">Calibre</button>
+      <button onclick="switchTab('langue')">Langue</button>
+    </nav>
+  </header>
+
+  <main>
+    <textarea id="textInput" placeholder="Écris ton texte ici..."></textarea>
+
+    <section id="optionsPanel">
+      <div id="style" class="tab">Options de style ici</div>
+      <div id="structure" class="tab" style="display:none">Options de structure ici</div>
+      <div id="emotion" class="tab" style="display:none">Options d’émotions ici</div>
+      <div id="calibre" class="tab" style="display:none">Options de calibre ici</div>
+      <div id="langue" class="tab" style="display:none">Options de langue ici</div>
+    </section>
+
+    <button onclick="applyAI()">✨ Reformuler avec l’IA</button>
+
+    <section>
+      <h2>Résultat :</h2>
+      <div id="output"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
